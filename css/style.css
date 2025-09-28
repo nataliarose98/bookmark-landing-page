@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/* Colores */
+/* Tipografía */
+/* Para botones reutilizables */
 /* Reset básico */
 * {
   margin: 0;
@@ -5,19 +9,9 @@
   box-sizing: border-box;
 }
 
-/* Variables */
-:root {
-  --color-primary: hsl(231, 69%, 60%);
-  --color-secondary: hsl(0, 94%, 66%);
-  --color-text: hsl(229, 8%, 60%);
-  --color-dark: hsl(229, 31%, 21%);
-  --font-main: 'Arial', sans-serif;
-}
-
-/* Estilos globales */
 body {
-  font-family: var(--font-main);
-  color: var(--color-dark);
+  font-family: "Arial", sans-serif;
+  color: hsl(229, 31%, 21%);
   background: #fff;
   line-height: 1.6;
 }
@@ -30,3 +24,46 @@ a {
 ul {
   list-style: none;
 }
+
+/* Botones */
+.btn-primary {
+  background-color: hsl(231, 69%, 60%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: hsl(0, 94%, 66%);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

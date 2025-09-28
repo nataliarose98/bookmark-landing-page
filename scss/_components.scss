@@ -1,0 +1,19 @@
+/* Botones */
+.btn-primary {
+  @include button($color-primary, #fff);
+}
+
+.btn-secondary {
+  @include button($color-secondary, #fff);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 768px){
+    justify-content: space-around;
+  }
+}
