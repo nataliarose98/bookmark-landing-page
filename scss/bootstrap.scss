@@ -1,0 +1,6 @@
+// Variables antes de importar bootstrap para sobreescribir colores
+$primary: #5265E1;
+$secondary: #FA5959;
+
+// Importar bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
