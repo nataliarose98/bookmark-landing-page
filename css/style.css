@@ -487,6 +487,16 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
+  appearance: button;
   -webkit-appearance: button;
 }
 button:not(:disabled),
@@ -544,6 +554,7 @@ legend + * {
 }
 
 [type=search] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
