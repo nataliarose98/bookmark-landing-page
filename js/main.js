@@ -27,3 +27,25 @@ window.addEventListener('resize', () => {
         }
     }
 });
+
+// --- LÓGICA PARA LAS TABS DE FEATURES ---
+const tabs = document.querySelectorAll('.features__tab');
+const contentPanels = document.querySelectorAll('.features__content-panel');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // 1. Obtener el número del tab al que se hizo clic
+        const tabNumber = tab.getAttribute('data-tab');
+        
+        // 2. Quitar la clase 'active' de todas las pestañas y paneles
+        tabs.forEach(item => item.classList.remove('active'));
+        contentPanels.forEach(panel => panel.classList.remove('active'));
+
+        // 3. Añadir la clase 'active' a la pestaña en la que se hizo clic
+        tab.classList.add('active');
+
+        // 4. Añadir la clase 'active' al panel de contenido correspondiente
+        const targetPanel = document.querySelector(`#tab-content-${tabNumber}`);
+        targetPanel.classList.add('active');
+    });
+});

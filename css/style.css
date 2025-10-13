@@ -211,7 +211,7 @@ h1, h2, h3 {
     }
 
     .hero__image-container, .hero__text {
-        flex: 1; /* Ambos elementos ocupan el 50% del contenedor */
+        flex: 1;
         order: 0; /* Reseteamos el order */
     }
     
@@ -221,5 +221,111 @@ h1, h2, h3 {
 
     .hero__buttons {
         justify-content: flex-start; /* Alineamos botones a la izquierda */
+    }
+}
+
+/* --- ESTILOS SECCIÓN FEATURES (Móvil) --- */
+.features {
+    padding: 4rem 0;
+}
+
+.features__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.features__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features__tabs {
+    display: flex;
+    flex-direction: column; 
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.features__tab {
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--grayish-blue);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.features__tab.active {
+    color: var(--very-dark-blue);
+}
+
+/* Línea roja que indica la pestaña activa */
+.features__tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background-color: var(--soft-red);
+}
+
+/* Paneles de contenido */
+.features__content-panel {
+    display: none; /* Ocultamos todos los paneles por defecto */
+    flex-direction: column; /* Imagen y texto apilados en móvil */
+    align-items: center;
+    text-align: center;
+}
+
+.features__content-panel.active {
+    display: flex; /* Mostramos solo el panel activo */
+}
+
+.features__image-container {
+    margin-bottom: 4rem;
+}
+
+.features__text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.features__text p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+    /* --- ESTILOS FEATURES (Escritorio) --- */
+    .features__tabs {
+        flex-direction: row; 
+        border-top: none;
+    }
+
+    .features__tab {
+        border-top: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        flex-grow: 1; /* Para que todas ocupen el mismo espacio */
+    }
+
+    .features__tab.active::after {
+        width: 100%; /* La línea roja ocupa todo el ancho de la pestaña */
+    }
+
+    .features__content-panel {
+        flex-direction: row; /* Imagen y texto en fila */
+        align-items: center;
+        text-align: left;
+        gap: 6rem; /* Espacio entre imagen y texto */
+    }
+
+    .features__image-container,
+    .features__text {
+        flex: 1; /* Ambos ocupan 50% del espacio */
     }
 }
