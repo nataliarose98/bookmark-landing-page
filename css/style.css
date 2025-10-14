@@ -416,3 +416,69 @@ h1, h2, h3 {
         margin-top: 5rem; /* Empujamos la tercera tarjeta aún más */
     }
 }
+
+/* --- ESTILOS SECCIÓN FAQ (Móvil) --- */
+.faq {
+    padding: 4rem 0;
+}
+
+.faq__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.faq__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.faq__accordion {
+    max-width: 540px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+}
+
+.faq__item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+}
+
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--very-dark-blue);
+}
+
+/* Elimina el marcador de flecha por defecto que ponen algunos navegadores */
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__arrow {
+    transition: transform 0.3s ease; /* Animación suave para la rotación */
+}
+
+.faq__answer {
+    padding-top: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Estilo para cuando el acordeón está abierto */
+.faq__item[open] .faq__question {
+    font-weight: var(--font-weight-medium);
+}
+
+.faq__item[open] .faq__arrow {
+    transform: rotate(180deg); /* Gira la flecha */
+    filter: invert(55%) sepia(58%) saturate(4521%) hue-rotate(330deg) brightness(101%) contrast(101%); /* Pinta la flecha de rojo */
+}
+
+.faq__button {
+    display: block;
+    width: fit-content; /* El botón solo ocupa el ancho de su contenido */
+    margin: 3rem auto 0;
+}
