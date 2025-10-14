@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <mata name="author" content="Natalia"></mata>
+    <meta name="author" content="Natalia"></meta>
     <title>Bookmark Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav container">
-        <a href="#" class="nav__logo">
-            <img src="images/logo-bookmark.svg" alt="Logo de Bookmark">
-        </a>
+            <a href="#" class="nav__logo">
+                <img src="images/logo-bookmark.svg" alt="Bookmark logo">
+            </a>
 
         <div class="nav__links">
             <a href="#features" class="nav__link">Features</a>
@@ -32,7 +32,7 @@
     <section id="hero" class="hero">
         <div class="container hero__container">
         <div class="hero__image-container">
-            <img src="./images/illustration-hero.svg" alt="Ilustración de la aplicación Bookmark en una tablet" class="hero__image">
+            <img src="./images/illustration-hero.svg" alt="Bookmark Ilustración" class="hero__image">
         </div>
         <div class="hero__text">
             <h1 class="hero__title">A Simple Bookmark Manager</h1>
@@ -67,7 +67,7 @@
         <div class="features__content">
             <div class="features__content-panel active" id="tab-content-1">
                 <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-1.svg" alt="Ilustración de la funcionalidad de bookmarking simple">
+                    <img src="./images/illustration-features-tab-1.svg" alt="Illustration of the functionality of simple markers.">
                 </div>
                 <div class="features__text">
                     <h3>Bookmark in one click</h3>
@@ -81,7 +81,7 @@
 
             <div class="features__content-panel" id="tab-content-2">
                 <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-2.svg" alt="Ilustración de la funcionalidad de búsqueda inteligente">
+                    <img src="./images/illustration-features-tab-2.svg" alt="Illustration of the smart search functionality">
                 </div>
                 <div class="features__text">
                     <h3>Intelligent search</h3>
@@ -95,7 +95,7 @@
 
             <div class="features__content-panel" id="tab-content-3">
                 <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-3.svg" alt="Ilustración de la funcionalidad de compartir bookmarks">
+                    <img src="./images/illustration-features-tab-3.svg" alt="Illustration of the bookmark sharing functionality">
                 </div>
                 <div class="features__text">
                     <h3>Share your bookmarks</h3>
@@ -122,7 +122,7 @@
 
             <div class="download__cards">
                 <article class="download__card">
-                    <img src="./images/logo-chrome.svg" alt="Logo de Google Chrome">
+                    <img src="./images/logo-chrome.svg" alt="Google Chrome logo">
                     <h3>Add to Chrome</h3>
                     <p>Minimum version 62</p>
                     <div class="download__dots"></div>
@@ -130,7 +130,7 @@
                 </article>
 
                 <article class="download__card">
-                    <img src="./images/logo-firefox.svg" alt="Logo de Mozilla Firefox">
+                    <img src="./images/logo-firefox.svg" alt="Mozilla Firefox logo">
                     <h3>Add to Firefox</h3>
                     <p>Minimum version 55</p>
                     <div class="download__dots"></div>
@@ -138,7 +138,7 @@
                 </article>
 
                 <article class="download__card">
-                    <img src="./images/logo-opera.svg" alt="Logo de Opera">
+                    <img src="./images/logo-opera.svg" alt="Opera logo">
                     <h3>Add to Opera</h3>
                     <p>Minimum version 46</p>
                     <div class="download__dots"></div>
@@ -212,12 +212,45 @@
         </div>
     </section>
 
-        <section id="contact">
-            </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <p class="contact__intro">35,000+ already joined</p>
+            <h2>Stay up-to-date with what we’re doing</h2>
+
+            <form class="contact__form" novalidate>
+             <div class="contact__form-group">
+                    <input type="email" class="contact__input" placeholder="Enter your email address" aria-label="Enter your email address">
+                    <img src="./images/icon-error.svg" class="contact__error-icon" alt="Error Icon">
+                    <div class="contact__error-msg">Whoops, make sure it's an email</div>
+                </div>
+                <button type="submit" class="btn btn--red">Contact Us</button>
+            </form>
+        </div>
+    </section>
+
     </main>
 
     <footer class="footer">
-        </footer>
+    <div class="container footer__container">
+        <nav class="footer__nav">
+            <a href="#" class="footer__logo">
+                <img src="images/logo-bookmark-white.svg" alt="Bookmark logo">
+            </a>
+            <a href="#features" class="footer__link">Features</a>
+            <a href="#" class="footer__link">Pricing</a>
+            <a href="#contact" class="footer__link">Contact</a>
+        </nav>
+
+        <div class="footer__social">
+            <a href="#" aria-label="Visita nuestra página de Facebook">
+                <img class="footer__social-icon" src="images/icon-facebook.svg" alt="Icon Facebook">
+            </a>
+            <a href="#" aria-label="Visita nuestro perfil de Twitter">
+                <img class="footer__social-icon" src="images/icon-twitter.svg" alt="Icon Twitter" >
+            </a>
+        </div>
+    </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

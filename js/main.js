@@ -49,3 +49,31 @@ tabs.forEach(tab => {
         targetPanel.classList.add('active');
     });
 });
+
+// --- LÓGICA PARA VALIDACIÓN DEL FORMULARIO ---
+const contactForm = document.querySelector('.contact__form');
+const emailInput = document.querySelector('.contact__input');
+const formGroup = document.querySelector('.contact__form-group');
+
+contactForm.addEventListener('submit', (e) => {
+    // 1. Evitamos que el formulario se envíe de verdad
+    e.preventDefault();
+
+    // 2. Obtenemos el valor del email y lo validamos
+    const emailValue = emailInput.value.trim();
+    
+    if (validateEmail(emailValue)) {
+        // Si es válido, quitamos la clase de error
+        formGroup.classList.remove('error');
+        console.log('Email válido:', emailValue);
+    } else {
+        // Si no es válido, añadimos la clase de error para mostrar los estilos
+        formGroup.classList.add('error');
+    }
+});
+
+// Función  para validar un email con una expresión regular
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
