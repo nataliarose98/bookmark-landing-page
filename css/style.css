@@ -84,7 +84,7 @@ h1, h2, h3 {
     height: 100%;
     background-color: hsla(229, 31%, 21%, 0.95); 
     padding-top: 5rem;
-     padding-bottom: 5rem; 
+    padding-bottom: 5rem; 
     overflow-y: auto;     
     z-index: 1000;
 }
@@ -97,12 +97,15 @@ h1, h2, h3 {
     width: 80%;
     text-align: center;
     padding-top: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .nav__links.active .nav__link--button {
     border: 2px solid var(--white);
     border-radius: 5px;
     padding: 0.8rem 2rem;
+    font-weight: bold;
 }
 
 /* --- ESTILOS SECCIÓN HERO (Móvil) --- */
@@ -148,6 +151,7 @@ h1, h2, h3 {
     font-weight: var(--font-weight-medium);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn--primary {
@@ -183,6 +187,9 @@ h1, h2, h3 {
         color: var(--very-dark-blue);
         text-transform: uppercase;
         letter-spacing: 1.5px;
+        border-top: none;
+        padding-top: 0;
+        text-decoration: none
     }
     
     .nav__link:hover {
@@ -195,6 +202,7 @@ h1, h2, h3 {
         border: 2px solid var(--soft-red);
         border-radius: 5px;
         padding: 0.8rem 2.5rem;
+        text-decoration: none;
     }
     
     .nav__link--button:hover {
@@ -327,5 +335,84 @@ h1, h2, h3 {
     .features__image-container,
     .features__text {
         flex: 1; /* Ambos ocupan 50% del espacio */
+    }
+}
+
+/* --- ESTILOS SECCIÓN DOWNLOAD (Móvil) --- */
+.download {
+    padding: 4rem 0;
+}
+
+.download__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.download__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.download__cards {
+    display: flex;
+    flex-direction: column; /* Apilamos las tarjetas */
+    align-items: center;   /* Centramos las tarjetas */
+    gap: 2rem;             /* Espacio entre tarjetas */
+}
+
+.download__card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 280px; /* Ancho máximo para cada tarjeta */
+}
+
+.download__card img {
+    margin: 0 auto 1.5rem;
+}
+
+.download__card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--very-dark-blue);
+}
+
+.download__card p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.download__dots {
+    height: 4px;
+    width: 100%;
+    background-image: url('../images/bg-dots.svg'); /* Imagen de puntos */
+    background-repeat: repeat-x;
+    background-position: center;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 992px) {
+    /* --- ESTILOS DOWNLOAD (Escritorio) --- */
+    .download__cards {
+        flex-direction: row; /* Alineamos las tarjetas en fila */
+        justify-content: center;
+        align-items: flex-start; /* Clave para el efecto escalonado */
+    }
+
+    /* Efecto escalonado */
+    .download__card:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .download__card:nth-child(2) {
+        margin-top: 2.5rem; /* Empujamos la segunda tarjeta hacia abajo */
+    }
+
+    .download__card:nth-child(3) {
+        margin-top: 5rem; /* Empujamos la tercera tarjeta aún más */
     }
 }
