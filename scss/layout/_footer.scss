@@ -1,0 +1,59 @@
+// scss/layout/_footer.scss
+
+.footer {
+    background-color: $very-dark-blue;
+    padding: 3rem 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $soft-red;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 2.5rem;
+
+        a:hover .footer__social-icon path {
+            fill: $soft-red;
+        }
+    }
+
+    &__social-icon path {
+        transition: fill 0.3s ease;
+    }
+}
+
+@include respond-to($breakpoint-tablet) {
+    .footer {
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__nav {
+            flex-direction: row;
+            gap: 3rem;
+        }
+    }
+}

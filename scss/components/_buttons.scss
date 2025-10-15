@@ -1,0 +1,50 @@
+// scss/components/_buttons.scss
+
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    &--primary {
+        background-color: $soft-blue;
+        color: $white;
+        border-color: $soft-blue;
+
+        &:hover {
+            background-color: $white;
+            color: $soft-blue;
+        }
+    }
+
+    &--secondary {
+        background-color: $light-gray;
+        color: $very-dark-blue;
+        border-color: $light-gray;
+
+        &:hover {
+            background-color: $white;
+            border-color: $very-dark-blue;
+        }
+    }
+
+    &--red {
+        background-color: $soft-red;
+        color: $white;
+        border-color: $soft-red;
+
+        &:hover {
+            background-color: $white;
+            color: $soft-red;
+        }
+    }
+}
