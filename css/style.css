@@ -1,0 +1,664 @@
+
+/* --- VARIABLES CSS --- */
+:root {
+    /* Colores primarios */
+    --soft-blue: hsl(231, 69%, 60%);
+    --soft-red: hsl(0, 94%, 66%);
+
+    /* Colores neutrales */
+    --grayish-blue: hsl(229, 8%, 60%);
+    --very-dark-blue: hsl(229, 31%, 21%);
+
+    /* Otros */
+    --white: #fff;
+    --light-gray: #f7f7f7;
+
+    /* Tipografía */
+    --font-family:sans-serif;
+    --font-size-body: 18px;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+}
+
+/* --- RESETEO BÁSICO Y ESTILOS GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    color: var(--grayish-blue);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--very-dark-blue);
+}
+
+/* --- ESTILOS PARA LA NAVEGACIÓN (Móvil) --- */
+.header {
+    padding: 2rem 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links {
+    display: none; 
+}
+
+.nav__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    z-index: 1001;      
+}
+
+/* Estilos para cuando el menú móvil está activo */
+.nav__links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(229, 31%, 21%, 0.95); 
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+    overflow-y: auto;     
+    z-index: 1000;
+}
+
+.nav__links.active .nav__link {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    border-top: 1px solid var(--grayish-blue);
+    width: 80%;
+    text-align: center;
+    padding-top: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__links.active .nav__link--button {
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+}
+
+/* --- ESTILOS SECCIÓN HERO (Móvil) --- */
+.hero {
+    padding: 2rem 0;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+}
+
+.hero__image-container {
+    order: 1; 
+}
+
+.hero__text {
+    order: 2;
+}
+
+.hero__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero__description {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre botones */
+}
+
+/* Clases para botones */
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: var(--soft-blue);
+    color: var(--white);
+    border: 2px solid var(--soft-blue);
+}
+
+.btn--secondary {
+    background-color: var(--light-gray);
+    color: var(--very-dark-blue);
+    border: 2px solid var(--light-gray);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* --- MEDIA QUERIES PARA ESCRITORIO --- */
+
+@media (min-width: 768px) {
+    .nav__toggle {
+        display: none; /* Ocultamos el botón  en escritorio */
+    }
+
+    .nav__links {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .nav__link {
+        color: var(--very-dark-blue);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-top: none;
+        padding-top: 0;
+        text-decoration: none
+    }
+    
+    .nav__link:hover {
+        color: var(--soft-red);
+    }
+
+    .nav__link--button {
+        color: var(--white);
+        background-color: var(--soft-red);
+        border: 2px solid var(--soft-red);
+        border-radius: 5px;
+        padding: 0.8rem 2.5rem;
+        text-decoration: none;
+    }
+    
+    .nav__link--button:hover {
+        color: var(--soft-red);
+        background-color: var(--white);
+    }
+    
+    /* Hero Section en Escritorio */
+    .hero__container {
+        flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+        align-items: center;
+        text-align: left;
+        gap: 3rem;
+    }
+
+    .hero__image-container, .hero__text {
+        flex: 1;
+        order: 0; /* Reseteamos el order */
+    }
+    
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__buttons {
+        justify-content: flex-start; /* Alineamos botones a la izquierda */
+    }
+}
+
+/* --- ESTILOS SECCIÓN FEATURES (Móvil) --- */
+.features {
+    padding: 4rem 0;
+}
+
+.features__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.features__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features__tabs {
+    display: flex;
+    flex-direction: column; 
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.features__tab {
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--grayish-blue);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.features__tab.active {
+    color: var(--very-dark-blue);
+}
+
+/* Línea roja que indica la pestaña activa */
+.features__tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background-color: var(--soft-red);
+}
+
+/* Paneles de contenido */
+.features__content-panel {
+    display: none; /* Ocultamos todos los paneles por defecto */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.features__content-panel.active {
+    display: flex; /* Mostramos solo el panel activo */
+}
+
+.features__image-container {
+    margin-bottom: 4rem;
+}
+
+.features__text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.features__text p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+    /* --- ESTILOS FEATURES (Escritorio) --- */
+    .features__tabs {
+        flex-direction: row; 
+        border-top: none;
+    }
+
+    .features__tab {
+        border-top: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        flex-grow: 1; /* Para que todas ocupen el mismo espacio */
+    }
+
+    .features__tab.active::after {
+        width: 100%; /* La línea roja ocupa todo el ancho de la pestaña */
+    }
+
+    .features__content-panel {
+        flex-direction: row; /* Imagen y texto en fila */
+        align-items: center;
+        text-align: left;
+        gap: 6rem; /* Espacio entre imagen y texto */
+    }
+
+    .features__image-container,
+    .features__text {
+        flex: 1; /* Ambos ocupan 50% del espacio */
+    }
+}
+
+/* --- ESTILOS SECCIÓN DOWNLOAD (Móvil) --- */
+.download {
+    padding: 4rem 0;
+}
+
+.download__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.download__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.download__cards {
+    display: flex;
+    flex-direction: column; /* Apilamos las tarjetas */
+    align-items: center;   /* Centramos las tarjetas */
+    gap: 2rem;             /* Espacio entre tarjetas */
+}
+
+.download__card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 280px; /* Ancho máximo para cada tarjeta */
+}
+
+.download__card img {
+    margin: 0 auto 1.5rem;
+}
+
+.download__card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--very-dark-blue);
+}
+
+.download__card p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.download__dots {
+    height: 4px;
+    width: 100%;
+    background-image: url('../images/bg-dots.svg'); /* Imagen de puntos */
+    background-repeat: repeat-x;
+    background-position: center;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 992px) {
+    /* --- ESTILOS DOWNLOAD (Escritorio) --- */
+    .download__cards {
+        flex-direction: row; /* Alineamos las tarjetas en fila */
+        justify-content: center;
+        align-items: flex-start; /* Clave para el efecto escalonado */
+    }
+
+    /* Efecto escalonado */
+    .download__card:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .download__card:nth-child(2) {
+        margin-top: 2.5rem; /* Empujamos la segunda tarjeta hacia abajo */
+    }
+
+    .download__card:nth-child(3) {
+        margin-top: 5rem; /* Empujamos la tercera tarjeta aún más */
+    }
+}
+
+/* --- ESTILOS SECCIÓN FAQ (Móvil) --- */
+.faq {
+    padding: 4rem 0;
+}
+
+.faq__intro {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 3rem;
+}
+
+.faq__intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.faq__accordion {
+    max-width: 540px;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+}
+
+.faq__item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+}
+
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--very-dark-blue);
+}
+
+/* Elimina el marcador de flecha por defecto que ponen algunos navegadores */
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__arrow {
+    transition: transform 0.3s ease; /* Animación suave para la rotación */
+}
+
+.faq__answer {
+    padding-top: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Estilo para cuando el acordeón está abierto */
+.faq__item[open] .faq__question {
+    font-weight: var(--font-weight-medium);
+}
+
+.faq__item[open] .faq__arrow {
+    transform: rotate(180deg); /* Gira la flecha */
+    filter: invert(55%) sepia(58%) saturate(4521%) hue-rotate(330deg) brightness(101%) contrast(101%); /* Pinta la flecha de rojo */
+}
+
+.faq__button {
+    display: block;
+    width: fit-content; /* El botón solo ocupa el ancho de su contenido */
+    margin: 3rem auto 0;
+}
+
+/* --- ESTILOS SECCIÓN CONTACT (Móvil) --- */
+.contact {
+    background-color: var(--soft-blue);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.contact__intro {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.contact h2 {
+    color: var(--white);
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column; /* Apilamos input y botón en móvil */
+    gap: 1rem;
+}
+
+.contact__form-group {
+    position: relative; /* Necesario para posicionar el icono de error */
+    border-radius: 5px; /* Se mostrará cuando tenga la clase .error */
+}
+
+/* Estado de error: cuando el form-group tiene la clase .error */
+.contact__form-group.error {
+    display: block;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact__input::placeholder {
+    color: var(--grayish-blue);
+}
+
+.contact__error-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Oculto por defecto */
+}
+
+.contact__form-group.error .contact__error-icon {
+    display: block; /* Visible en estado de error */
+}
+
+.contact__error-msg {
+    color: var(--white);
+    text-align: left;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--soft-red);
+    border-radius: 0 0 5px 5px;
+    margin-top: -3px; /* Pequeño ajuste para unirlo al input */
+    display: none;
+}
+
+.contact__form-group.error .contact__input {
+    border: 2px solid var(--soft-red);
+    border-radius: 5px 5px 0 0; /* Ajustamos el borde para que se una al mensaje */
+}
+
+/* Cuando hay error, mostramos el icono */
+.contact__form-group.error .contact__error-icon {
+    display: block; 
+}
+
+/* Cuando hay error, mostramos el mensaje */
+.contact__form-group.error .contact__error-msg {
+    display: block; 
+}
+
+/* Botón rojo personalizado */
+.btn--red {
+    background-color: var(--soft-red);
+    color: var(--white);
+    border: 2px solid var(--soft-red);
+}
+
+.btn--red:hover {
+    color: var(--soft-red);
+    background-color: var(--white);
+}
+
+
+@media (min-width: 768px) {
+    /* --- ESTILOS CONTACT (Escritorio) --- */
+    .contact__form {
+        flex-direction: row; /* Input y botón en la misma fila */
+        max-width: 500px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .contact__form-group {
+        flex-grow: 1; /* El grupo del input ocupa todo el espacio disponible */
+    }
+
+    .contact__form button {
+        flex-shrink: 0; /* Evita que el botón se encoja */
+    }
+}
+
+/* --- ESTILOS FOOTER (Móvil) --- */
+.footer {
+    background-color: var(--very-dark-blue);
+    padding: 3rem 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column; /* Apilamos todo verticalmente */
+    align-items: center;   /* Centramos los elementos */
+    gap: 2rem;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__link {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: var(--soft-red);
+}
+
+.footer__social {
+    display: flex;
+    gap: 2.5rem; /* Espacio entre los iconos sociales */
+}
+
+/* Estilo para los iconos SVG */
+.footer__social-icon path {
+    transition: fill 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Al pasar el ratón sobre el enlace, cambiamos el color de relleno del SVG */
+.footer__social a:hover .footer__social-icon path {
+    fill: var(--soft-red);
+}
+
+@media (min-width: 768px) {
+    /* --- ESTILOS FOOTER (Escritorio) --- */
+    .footer__container {
+        flex-direction: row; /* Elementos en la misma fila */
+        justify-content: space-between; /* Empuja la nav y social a los extremos */
+    }
+
+    .footer__nav {
+        flex-direction: row; /* Alinea el logo y los links horizontalmente */
+        gap: 3rem;
+    }
+}
