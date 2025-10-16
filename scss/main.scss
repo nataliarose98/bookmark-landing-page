@@ -1,0 +1,18 @@
+// scss/main.scss
+
+// 1. Utilidades (Variables y Mixins)
+@import 'mixins';
+@import 'base/variables';
+
+// 2. Base (Reseteo, tipografía, etc.)
+@import 'base/base';
+
+// 3. Componentes (Botones, tarjetas, etc.)
+@import 'components/buttons';
+
+// 4. Layout (Header, Footer, etc.)
+@import 'layout/header';
+@import 'layout/footer';
+
+// 5. Páginas (Estilos específicos de la página de inicio)
+@import 'pages/home';

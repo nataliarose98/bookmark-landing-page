@@ -1,0 +1,106 @@
+// scss/layout/_header.scss
+
+.header {
+    padding: 2rem 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__links {
+        display: none; // Oculto en móvil
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(229, 31%, 21%, 0.95);
+            padding: 5rem 0;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+    }
+
+    &__link {
+        .nav__links.active & {
+            color: $white;
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            border-top: 1px solid $grayish-blue;
+            width: 80%;
+            text-align: center;
+            padding-top: 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        &--button.nav__links.active & {
+            border: 2px solid $white;
+            border-radius: 5px;
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+        }
+    }
+
+    &__toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+    }
+}
+
+// Estilos de escritorio para la navegación
+@include respond-to($breakpoint-tablet) {
+    .nav {
+        &__toggle {
+            display: none;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2.5rem;
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        &__link {
+            color: $very-dark-blue;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-top: none;
+            padding-top: 0;
+
+            &:hover {
+                color: $soft-red;
+            }
+
+            &--button {
+                color: $white;
+                background-color: $soft-red;
+                border: 2px solid $soft-red;
+                border-radius: 5px;
+                padding: 0.8rem 2.5rem;
+
+                &:hover {
+                    color: $soft-red;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}

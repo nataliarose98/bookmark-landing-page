@@ -1,0 +1,19 @@
+// scss/base/_variables.scss
+
+// Colors
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(229, 31%, 21%);
+$white: #fff;
+$light-gray: #f7f7f7;
+
+// Typography
+$font-family: 'Rubik', sans-serif;
+$font-size-body: 18px;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
