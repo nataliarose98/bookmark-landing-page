@@ -1,63 +1,6 @@
 // scss/pages/_home.scss
 
 // --- HERO SECTION ---
-.hero {
-    padding: 2rem 0;
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    &__image-container {
-        order: 1;
-    }
-
-    &__text {
-        order: 2;
-    }
-
-    &__title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    &__description {
-        line-height: 1.6;
-        margin-bottom: 2rem;
-    }
-
-    &__buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-}
-
-@include respond-to($breakpoint-tablet) {
-    .hero {
-        &__container {
-            flex-direction: row-reverse;
-            align-items: center;
-            text-align: left;
-            gap: 3rem;
-        }
-
-        &__image-container, &__text {
-            flex: 1;
-            order: 0;
-        }
-        
-        &__title {
-            font-size: 3rem;
-        }
-
-        &__buttons {
-            justify-content: flex-start;
-        }
-    }
-}
 
 
 // --- FEATURES SECTION ---

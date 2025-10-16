@@ -8,45 +8,61 @@
     <link rel="stylesheet" href="css/custom_bootstrap.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <img src="images/logo-bookmark.svg" alt="Bookmark logo">
-            </a>
+    <header class="py-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo-bookmark.svg" alt="Bookmark logo">
+                </a>
 
-        <div class="nav__links">
-            <a href="#features" class="nav__link">Features</a>
-            <a href="#" class="nav__link">Pricing</a>
-            <a href="#contact" class="nav__link">Contact</a>
-            <a href="#" class="nav__link nav__link--button">Login</a>
-        </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <button class="nav__toggle" aria-label="Abrir menú">
-            <img src="images/icon-hamburger.svg" alt="Menú">
-        </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase mx-2" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase mx-2" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase mx-2" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-4">
+                            <a class="btn btn-danger text-uppercase px-4" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
     
-    <section id="hero" class="hero">
-        <div class="container hero__container">
-        <div class="hero__image-container">
-            <img src="./images/illustration-hero.svg" alt="Bookmark Ilustración" class="hero__image">
-        </div>
-        <div class="hero__text">
-            <h1 class="hero__title">A Simple Bookmark Manager</h1>
-            <p class="hero__description">
-                A clean and simple interface to organize your favourite websites. Open a new
-                browser tab and see your sites load instantly. Try it for free.
-            </p>
-            <div class="hero__buttons">
-                <a href="#" class="btn btn--primary">Get it on Chrome</a>
-                <a href="#" class="btn btn--secondary">Get it on Firefox</a>
+    <section id="hero" class="container py-5 my-5">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-4 fw-bold">A Simple Bookmark Manager</h1>
+                <p class="lead text-muted my-4">
+                    A clean and simple interface to organize your favourite websites. Open a new 
+                    browser tab and see your sites load instantly. Try it for free.
+                </p>
+                <div class="d-flex justify-content-center justify-content-lg-start gap-2">
+                    <a href="#" class="btn btn-primary btn-lg shadow">Get it on Chrome</a>
+                    <a href="#" class="btn btn-light btn-lg shadow">Get it on Firefox</a>
+                </div>
             </div>
+
+            <div class="col-lg-6">
+                <img src="./images/illustration-hero.svg" alt="Bookmark Ilustración" class="img-fluid">
             </div>
+
         </div>
-    </section> 
+    </section>
+
     <section id="features" class="features">
         <div class="container">
         <div class="features__intro">
