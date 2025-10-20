@@ -1,0 +1,9 @@
+.footer-social {
+    a svg path {
+        transition: fill 0.2s ease-in-out;
+    }
+
+    a:hover svg path {
+        fill: $danger; // Se pone rojo al pasar el ratón
+    }
+}

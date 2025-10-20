@@ -11903,4 +11903,11 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 
+.footer-social a svg path {
+  transition: fill 0.2s ease-in-out;
+}
+.footer-social a:hover svg path {
+  fill: #FA5959;
+}
+
 /*# sourceMappingURL=custom_bootstrap.css.map */
