@@ -202,69 +202,94 @@
         </div>
     </section>
 
-
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="faq__intro">
-                <h2>Frequently Asked Questions</h2>
-                <p>
+    <section id="faq" class="container py-5 my-5">
+        <div class="row">
+            <div class="col-lg-7 mx-auto text-center">
+                <h2 class="h1 fw-bold">Frequently Asked Questions</h2>
+                <p class="lead text-muted my-4">
                     Here are some of our FAQs. If you have any other questions
                     you’d like answered please feel free to email us.
                 </p>
             </div>
-
-            <div class="faq__accordion">
-                <details class="faq__item">
-                    <summary class="faq__question">
-                        What is Bookmark?
-                        <img src="./images/icon-arrow.svg" alt="Toggle Answer" class="faq__arrow">
-                    </summary>
-                    <p class="faq__answer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-                        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-                    </p>
-                </details>
-
-                <details class="faq__item">
-                    <summary class="faq__question">
-                        How can I request a new browser?
-                        <img src="./images/icon-arrow.svg" alt="Toggle Answer" class="faq__arrow">
-                    </summary>
-                    <p class="faq__answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-                    ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis
-                    ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
-                    luctus eros aliquet convallis ultricies.
-                    </p>
-                </details>
-
-                <details class="faq__item">
-                    <summary class="faq__question">
-                        Is there a mobile app?
-                        <img src="./images/icon-arrow.svg" alt="Toggle Answer" class="faq__arrow">
-                    </summary>
-                    <p class="faq__answer">
-                        Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-                        urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus.
-                        Sed sollicitudin ex et ultricies bibendum.
-                    </p>
-                </details>
-
-                <details class="faq__item">
-                    <summary class="faq__question">
-                        What about other Chromium browsers?
-                        <img src="./images/icon-arrow.svg" alt="Toggle Answer" class="faq__arrow">
-                    </summary>
-                    <p class="faq__answer">
-                        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
-                        Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
-                    </p>
-                </details>
-            </div>
-
-            <a href="#" class="btn btn--primary faq__button">More Info</a>
         </div>
+    
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+            
+                <div class="accordion accordion-flush" id="faqAccordion">
+                
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                What is Bookmark?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                                justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How can I request a new browser?
+                            </button>
+                    </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+                                Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+                                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+                                Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Is there a mobile app?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+                                urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+                                sollicitudin ex et ultricies bibendum.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                What about other Chromium browsers?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+                                vitae neque eget nisl gravida pellentesque non ut velit.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="#" class="btn btn-primary shadow">More Info</a>
+            </div>
+        </div>
+
     </section>
+
+
 
     <section id="contact" class="contact">
         <div class="container">

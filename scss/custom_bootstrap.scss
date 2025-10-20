@@ -8,8 +8,11 @@ $dark:          hsl(229, 31%, 21%);
 // fuente por defecto 
 $font-family-sans-serif: 'Rubik', sans-serif;
 
+$accordion-icon-color:$primary; 
+$accordion-icon-active-color:  $danger; 
 
 // --- 2. IMPORTACIÓN DE BOOTSTRAP ---
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "features";
 @import "download";
+@import "faq";
