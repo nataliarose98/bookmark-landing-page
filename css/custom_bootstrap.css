@@ -11883,4 +11883,9 @@ textarea.form-control-lg {
   background-color: #FA5959;
 }
 
+.dotted-divider {
+  border: 0;
+  border-top: 4px dotted #adb5bd;
+}
+
 /*# sourceMappingURL=custom_bootstrap.css.map */
