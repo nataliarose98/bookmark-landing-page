@@ -1,0 +1,22 @@
+.accordion-flush {
+
+    .accordion-item {
+        border-top: 0; 
+        border-bottom: 1px solid #eee; 
+    }
+
+    .accordion-button {
+        font-weight: 500; 
+        color: $dark;
+
+    
+        &:not(.collapsed) {
+            color: $dark; 
+        }
+
+        
+        &:focus {
+            box-shadow: none; 
+        }
+    }
+}

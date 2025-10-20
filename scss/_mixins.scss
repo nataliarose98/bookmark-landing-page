@@ -1,6 +1,0 @@
-// Mixin para manejar media queries de forma semántica
-@mixin respond-to($breakpoint) {
-    @media (min-width: $breakpoint) {
-        @content;
-    }
-}
