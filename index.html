@@ -63,67 +63,91 @@
         </div>
     </section>
 
-    <section id="features" class="features">
-        <div class="container">
-        <div class="features__intro">
-            <h2>Features</h2>
-            <p>
-                Our aim is to make it quick and easy for you to access your
-                favourite websites. Your bookmarks sync between your devices
-                so you can access them on the go.
-            </p>
-        </div>
-
-        <div class="features__tabs">
-            <button class="features__tab active" data-tab="1">Simple Bookmarking</button>
-            <button class="features__tab" data-tab="2">Speedy Searching</button>
-            <button class="features__tab" data-tab="3">Easy Sharing</button>
-        </div>
-
-        <div class="features__content">
-            <div class="features__content-panel active" id="tab-content-1">
-                <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-1.svg" alt="Illustration of the functionality of simple markers.">
-                </div>
-                <div class="features__text">
-                    <h3>Bookmark in one click</h3>
-                    <p>
-                        Organize your bookmarks however you like. Our simple drag-and-drop interface
-                        gives you complete control over how you manage your favourite sites.
-                    </p>
-                    <a href="#" class="btn btn--primary">More Info</a>
-                </div>
-            </div>
-
-            <div class="features__content-panel" id="tab-content-2">
-                <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-2.svg" alt="Illustration of the smart search functionality">
-                </div>
-                <div class="features__text">
-                    <h3>Intelligent search</h3>
-                    <p>
-                        Our powerful search feature will help you find saved sites in no time at all.
-                        No need to trawl through all of your bookmarks.
-                    </p>
-                    <a href="#" class="btn btn--primary">More Info</a>
-                </div>
-            </div>
-
-            <div class="features__content-panel" id="tab-content-3">
-                <div class="features__image-container">
-                    <img src="./images/illustration-features-tab-3.svg" alt="Illustration of the bookmark sharing functionality">
-                </div>
-                <div class="features__text">
-                    <h3>Share your bookmarks</h3>
-                    <p>
-                        Easily share your bookmarks and collections with others. Create a shareable
-                        link that you can send at the click of a button.
-                    </p>
-                    <a href="#" class="btn btn--primary">More Info</a>
-                </div>
+    <section id="features" class="container py-5 my-5">
+        <div class="row">
+            <div class="col-lg-7 mx-auto text-center">
+                <h2 class="h1 fw-bold">Features</h2>
+                <p class="lead text-muted my-4">
+                    Our aim is to make it quick and easy for you to access your
+                    favourite websites. Your bookmarks sync between your devices
+                    so you can access them on the go.
+                </p>
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-12">
+                
+                <ul class="nav nav-tabs justify-content-center border-0" id="featuresTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active border-0" id="tab-1-btn" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">
+                            Simple Bookmarking
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border-0" id="tab-2-btn" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">
+                            Speedy Searching
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border-0" id="tab-3-btn" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">
+                            Easy Sharing
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content mt-5" id="featuresTabsContent">
+                    
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="./images/illustration-features-tab-1.svg" alt="Ilustración de Simple Bookmarking" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 text-center text-lg-start">
+                                <h3 class="h2 fw-bold">Bookmark in one click</h3>
+                                <p class="lead text-muted my-4">
+                                    Organize your bookmarks however you like. Our simple drag-and-drop interface
+                                    gives you complete control over how you manage your favourite sites.
+                                </p>
+                                <a href="#" class="btn btn-primary shadow">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="./images/illustration-features-tab-2.svg" alt="Ilustración de Speedy Searching" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 text-center text-lg-start">
+                                <h3 class="h2 fw-bold">Intelligent Search</h3>
+                                <p class="lead text-muted my-4">
+                                    Our powerful search feature will help you find saved sites in no time at all. 
+                                    No need to trawl through all of your bookmarks.
+                                </p>
+                                <a href="#" class="btn btn-primary shadow">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3-btn">
+                         <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="./images/illustration-features-tab-3.svg" alt="Ilustración de Easy Sharing" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 text-center text-lg-start">
+                                <h3 class="h2 fw-bold">Share your bookmarks</h3>
+                                <p class="lead text-muted my-4">
+                                    Easily share your bookmarks and collections with others. Create a shareable 
+                                    link that you can send at the click of a button.
+                                </p>
+                                <a href="#" class="btn btn-primary shadow">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <section id="download" class="download">
